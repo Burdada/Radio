@@ -132,7 +132,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldSetVolume(){
+    public void shouldSetVolume() {
         Radio radio = new Radio();
         radio.setVolume(5);
 
@@ -144,7 +144,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldSetVolumeOnTheEnd(){
+    public void shouldSetVolumeOnTheEnd() {
         Radio radio = new Radio();
         radio.setVolume(10);
 
@@ -156,7 +156,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldSetVolumeOnTheLeftEnd(){
+    public void shouldSetVolumeOnTheLeftEnd() {
         Radio radio = new Radio();
         radio.setVolume(0);
 
@@ -168,7 +168,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldNotSetVolumeUnderTheEnd(){
+    public void shouldNotSetVolumeUnderTheEnd() {
         Radio radio = new Radio();
         radio.setVolume(-1);
 
@@ -180,7 +180,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldNotSetVolumeAboveTheEnd(){
+    public void shouldNotSetVolumeAboveTheEnd() {
         Radio radio = new Radio();
         radio.setVolume(11);
 
@@ -192,7 +192,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldIncreaseVolume(){
+    public void shouldIncreaseVolume() {
         Radio radio = new Radio();
         radio.setVolume(6);
         radio.increaseVolume();
@@ -205,7 +205,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldIncreaseVolumeOnTheLeftEnd(){
+    public void shouldIncreaseVolumeOnTheLeftEnd() {
         Radio radio = new Radio();
         radio.setVolume(0);
         radio.increaseVolume();
@@ -216,8 +216,9 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
 
     }
+
     @Test
-    public void shouldNotIncreaseVolumeOnTheEnd(){
+    public void shouldNotIncreaseVolumeOnTheEnd() {
         Radio radio = new Radio();
         radio.setVolume(10);
         radio.increaseVolume();
@@ -230,7 +231,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldReduceVolume(){
+    public void shouldReduceVolume() {
         Radio radio = new Radio();
         radio.setVolume(6);
         radio.reduceVolume();
@@ -243,7 +244,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldNotReduceVolumeOnTheLeftEnd(){
+    public void shouldNotReduceVolumeOnTheLeftEnd() {
         Radio radio = new Radio();
         radio.setVolume(0);
         radio.reduceVolume();
@@ -254,8 +255,9 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
 
     }
+
     @Test
-    public void shouldReduceVolumeOnTheEnd(){
+    public void shouldReduceVolumeOnTheEnd() {
         Radio radio = new Radio();
         radio.setVolume(10);
         radio.reduceVolume();
