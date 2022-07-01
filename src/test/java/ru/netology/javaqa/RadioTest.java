@@ -401,4 +401,38 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
 
     }
+
+    @Test
+    public void shouldSetStationUnderLimit() {
+        Radio radio = new Radio(20);
+
+        radio.setCurrentStation(15);
+
+        Assertions.assertEquals(15, radio.getCurrentStation());
+    }
+    @Test
+    public void shouldSetStationOnTheEnd() {
+        Radio radio = new Radio(20);
+
+        radio.setCurrentStation(19);
+
+        Assertions.assertEquals(19, radio.getCurrentStation());
+    }
+    @Test
+    public void shouldNotSetStationOnTheEnd() {
+        Radio radio = new Radio(20);
+
+        radio.setCurrentStation(20);
+
+        Assertions.assertEquals(0, radio.getCurrentStation());
+    }
+
+    @Test
+    public void shouldNotSetStationOverLimit() {
+        Radio radio = new Radio(20);
+
+        radio.setCurrentStation(0);
+
+        Assertions.assertEquals(0, radio.getCurrentStation());
+    }
 }
