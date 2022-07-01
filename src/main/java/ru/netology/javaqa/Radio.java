@@ -42,7 +42,7 @@ public class Radio {
         if (currentStation > 1) {
             newCurrentStation = currentStation - 1;
         } else {
-            newCurrentStation = maxStation;
+            newCurrentStation = 0;
         }
         currentStation = newCurrentStation;
     }
