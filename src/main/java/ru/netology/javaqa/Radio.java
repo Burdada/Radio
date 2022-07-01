@@ -39,10 +39,10 @@ public class Radio {
     }
 
     public void prevStation() {
-        if (currentStation > 1) {
+        if (currentStation > 0) {
             newCurrentStation = currentStation - 1;
         } else {
-            newCurrentStation = 0;
+            newCurrentStation = maxStation;
         }
         currentStation = newCurrentStation;
     }
